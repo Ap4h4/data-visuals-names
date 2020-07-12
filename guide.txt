@@ -1,0 +1,21 @@
+Pandas command:
+- renaming columns
+dfPie = dfPie.rename(columns={'IMIĘ_PIERWSZE':'name','LICZBA_WYSTĄPIEŃ':'occurences'})
+- Setting index:
+dfPie = dfPie.set_index('name')
+
+- adding blank column to df
+dfPie['perc']=''
+
+-updating each row element during itterow (row is just a copy! not exact df):
+for index,row in dfPie.iterrows():
+	dfPie.loc[index,'perc']=((row['occurences']/sum)*100)
+
+
+
+
+
+
+ dfPie = dfSum.head(10)
+
+ sum = 
