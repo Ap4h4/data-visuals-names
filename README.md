@@ -1,5 +1,6 @@
 # data-visuals-names
 #Polish version
+
 Projekt wizualizacji danych udostępnionych przez polskie Ministerstwo Cyfryzacji na stronie:
 https://dane.gov.pl/dataset/219,imiona-nadawane-dzieciom-w-polsce
 Dane zawierają imiona nadane dzieciom urodzonym w 2019 roku z podziałem na województwa. 
@@ -27,6 +28,7 @@ Plik json zawierający kontury województw:
 https://raw.githubusercontent.com/deldersveld/topojson/master/countries/poland/poland-provinces.json
 
 #English version
+
 Visualisation of open data published by polish Ministry of Digital Affairs on page:
 https://dane.gov.pl/dataset/219,imiona-nadawane-dzieciom-w-polsce
 Data files include names given for newborns in 2019 divided by polish provinces.
