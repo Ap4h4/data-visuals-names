@@ -1,0 +1,2149 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/19/2020 10:58:36 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-IAVEJ99H"
+  DTS:CreatorName="LAPTOP-IAVEJ99H\Merlin"
+  DTS:DTSID="{98F4973C-299A-4D09-B0BF-F4185EA58DC6}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.121"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{F5F0CACE-4AAE-4405-875E-F21AA6B5BCF1}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[csv1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{581EC35F-C302-452C-BE75-9D82814BBB56}"
+      DTS:ObjectName="csv1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\Merlin\Podyplomowe\SSIS tutorial\Zad2\imiona_meskie.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WOJ"
+              DTS:DTSID="{649B3124-E509-4FB2-9F5E-319A530E0C13}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WOJEWÓDZTWO"
+              DTS:DTSID="{25232CC1-A5AA-4D5D-AB84-CDA22329801A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IMIĘ_PIERWSZE"
+              DTS:DTSID="{76C7A8AE-9192-4AF6-B47B-5EF22F06DC75}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PŁEĆ"
+              DTS:DTSID="{6CC0686F-284D-4FD5-9479-3FDF8415AE0A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LICZBA_WYSTĄPIEŃ"
+              DTS:DTSID="{70F951CF-7AAF-4699-9511-EF5F4A701C47}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[csv2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{7A67C42D-1B9B-4BBB-BAD9-B23EC05D3FFF}"
+      DTS:ObjectName="csv2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\Merlin\Podyplomowe\SSIS tutorial\Zad2\imiona_żeńskie.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WOJ"
+              DTS:DTSID="{3E8F0C99-2B56-445E-90D4-0EF1521C7F9F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WOJEWÓDZTWO"
+              DTS:DTSID="{6923394F-FBA6-4B2C-A030-8394BBA92382}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IMIĘ_PIERWSZE"
+              DTS:DTSID="{69BCD761-09D9-4EFA-BBD1-5E8CB0F04DAE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PŁEĆ"
+              DTS:DTSID="{14296999-9FA4-435F-A61C-65965818762C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LICZBA_WYSTĄPIEŃ"
+              DTS:DTSID="{C5C39F18-5F09-40D2-9646-943B17BDF747}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\CsvToDB"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{79F65300-9247-42B9-A84D-088B827D1825}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="CsvToDB">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\CsvToDB\Changing gender value to &quot;m&quot;"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Changing gender value to &quot;m&quot;"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\CsvToDB\Changing gender value to &quot;m&quot;.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CsvToDB\Changing gender value to &quot;m&quot;.Inputs[Derived Column Input].Columns[PŁEĆ]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="PŁEĆ"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].Columns[PŁEĆ]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"m"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"m"</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CsvToDB\Changing gender value to &quot;m&quot;.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\CsvToDB\Changing gender value to &quot;m&quot;.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CsvToDB\Changing gender value to &quot;m&quot;.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\CsvToDB\Changing gender value to &quot;m&quot;.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CsvToDB\Changing gender value to &quot;m&quot;.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CsvToDB\Changing gender value to &quot;m&quot;.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CsvToDB\Changing gender value to &quot;m&quot;.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CsvToDB\Changing gender value to &quot;m&quot;.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CsvToDB\Changing gender values to &quot;k&quot;"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Changing gender values to &quot;k&quot;"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\CsvToDB\Changing gender values to &quot;k&quot;.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CsvToDB\Changing gender values to &quot;k&quot;.Inputs[Derived Column Input].Columns[PŁEĆ]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="PŁEĆ"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].Columns[PŁEĆ]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"k"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"k"</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CsvToDB\Changing gender values to &quot;k&quot;.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\CsvToDB\Changing gender values to &quot;k&quot;.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CsvToDB\Changing gender values to &quot;k&quot;.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\CsvToDB\Changing gender values to &quot;k&quot;.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CsvToDB\Changing gender values to &quot;k&quot;.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CsvToDB\Changing gender values to &quot;k&quot;.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CsvToDB\Changing gender values to &quot;k&quot;.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CsvToDB\Changing gender values to &quot;k&quot;.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CsvToDB\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\CsvToDB\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CsvToDB\Data Conversion.Inputs[Data Conversion Input].Columns[IMIĘ_PIERWSZE]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="IMIĘ_PIERWSZE"
+                      lineageId="Package\CsvToDB\Sort by occurrences within Provinces.Outputs[Sort Output].Columns[IMIĘ_PIERWSZE]" />
+                    <inputColumn
+                      refId="Package\CsvToDB\Data Conversion.Inputs[Data Conversion Input].Columns[PŁEĆ]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="PŁEĆ"
+                      lineageId="Package\CsvToDB\Sort by occurrences within Provinces.Outputs[Sort Output].Columns[PŁEĆ]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CsvToDB\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\CsvToDB\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CsvToDB\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of IMIĘ_PIERWSZE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\CsvToDB\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of IMIĘ_PIERWSZE]"
+                      name="Copy of IMIĘ_PIERWSZE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\CsvToDB\Sort by occurrences within Provinces.Outputs[Sort Output].Columns[IMIĘ_PIERWSZE]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CsvToDB\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PŁEĆ]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="11"
+                      lineageId="Package\CsvToDB\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PŁEĆ]"
+                      name="Copy of PŁEĆ"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\CsvToDB\Sort by occurrences within Provinces.Outputs[Sort Output].Columns[PŁEĆ]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CsvToDB\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\CsvToDB\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CsvToDB\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CsvToDB\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CsvToDB\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CsvToDB\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CsvToDB\Loading females names"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Loading females names"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CsvToDB\Loading females names.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[csv2]"
+                  connectionManagerRefId="Package.ConnectionManagers[csv2]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].Columns[WOJ]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].ExternalColumns[WOJ]"
+                      lineageId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].Columns[WOJ]"
+                      name="WOJ"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].Columns[IMIĘ_PIERWSZE]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].ExternalColumns[IMIĘ_PIERWSZE]"
+                      length="20"
+                      lineageId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].Columns[IMIĘ_PIERWSZE]"
+                      name="IMIĘ_PIERWSZE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].Columns[PŁEĆ]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].ExternalColumns[PŁEĆ]"
+                      length="11"
+                      lineageId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].Columns[PŁEĆ]"
+                      name="PŁEĆ"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].Columns[LICZBA_WYSTĄPIEŃ]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].ExternalColumns[LICZBA_WYSTĄPIEŃ]"
+                      lineageId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].Columns[LICZBA_WYSTĄPIEŃ]"
+                      name="LICZBA_WYSTĄPIEŃ"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].ExternalColumns[WOJ]"
+                      dataType="i1"
+                      name="WOJ" />
+                    <externalMetadataColumn
+                      refId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].ExternalColumns[WOJEWÓDZTWO]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="WOJEWÓDZTWO" />
+                    <externalMetadataColumn
+                      refId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].ExternalColumns[IMIĘ_PIERWSZE]"
+                      codePage="65001"
+                      dataType="str"
+                      length="20"
+                      name="IMIĘ_PIERWSZE" />
+                    <externalMetadataColumn
+                      refId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].ExternalColumns[PŁEĆ]"
+                      codePage="65001"
+                      dataType="str"
+                      length="11"
+                      name="PŁEĆ" />
+                    <externalMetadataColumn
+                      refId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].ExternalColumns[LICZBA_WYSTĄPIEŃ]"
+                      dataType="i2"
+                      name="LICZBA_WYSTĄPIEŃ" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CsvToDB\Loading males names"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Loading males names"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CsvToDB\Loading males names.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[csv1]"
+                  connectionManagerRefId="Package.ConnectionManagers[csv1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].Columns[WOJ]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].ExternalColumns[WOJ]"
+                      lineageId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].Columns[WOJ]"
+                      name="WOJ"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].Columns[IMIĘ_PIERWSZE]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].ExternalColumns[IMIĘ_PIERWSZE]"
+                      length="20"
+                      lineageId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].Columns[IMIĘ_PIERWSZE]"
+                      name="IMIĘ_PIERWSZE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].Columns[PŁEĆ]"
+                      codePage="65001"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].ExternalColumns[PŁEĆ]"
+                      length="11"
+                      lineageId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].Columns[PŁEĆ]"
+                      name="PŁEĆ"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].Columns[LICZBA_WYSTĄPIEŃ]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].ExternalColumns[LICZBA_WYSTĄPIEŃ]"
+                      lineageId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].Columns[LICZBA_WYSTĄPIEŃ]"
+                      name="LICZBA_WYSTĄPIEŃ"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].ExternalColumns[WOJ]"
+                      dataType="i1"
+                      name="WOJ" />
+                    <externalMetadataColumn
+                      refId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].ExternalColumns[WOJEWÓDZTWO]"
+                      codePage="65001"
+                      dataType="str"
+                      length="50"
+                      name="WOJEWÓDZTWO" />
+                    <externalMetadataColumn
+                      refId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].ExternalColumns[IMIĘ_PIERWSZE]"
+                      codePage="65001"
+                      dataType="str"
+                      length="20"
+                      name="IMIĘ_PIERWSZE" />
+                    <externalMetadataColumn
+                      refId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].ExternalColumns[PŁEĆ]"
+                      codePage="65001"
+                      dataType="str"
+                      length="11"
+                      name="PŁEĆ" />
+                    <externalMetadataColumn
+                      refId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].ExternalColumns[LICZBA_WYSTĄPIEŃ]"
+                      dataType="i2"
+                      name="LICZBA_WYSTĄPIEŃ" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CsvToDB\Merge"
+              componentClassID="Microsoft.Merge"
+              contactInfo="Merge;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple sorted data flows into one sorted data flow. Unlike the Merge Join, all rows flow to the output. For example, combine two sorted lists of customers into a single sorted list. If sorting is not important, use the Union All transformation. "
+              name="Merge"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\CsvToDB\Merge.Inputs[Merge Input 1]"
+                  name="Merge Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CsvToDB\Merge.Inputs[Merge Input 1].Columns[WOJ]"
+                      cachedDataType="i1"
+                      cachedName="WOJ"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\CsvToDB\Sort.Outputs[Sort Output].Columns[WOJ]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[WOJ]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CsvToDB\Merge.Inputs[Merge Input 1].Columns[IMIĘ_PIERWSZE]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="IMIĘ_PIERWSZE"
+                      lineageId="Package\CsvToDB\Sort.Outputs[Sort Output].Columns[IMIĘ_PIERWSZE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[IMIĘ_PIERWSZE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CsvToDB\Merge.Inputs[Merge Input 1].Columns[PŁEĆ]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="PŁEĆ"
+                      lineageId="Package\CsvToDB\Sort.Outputs[Sort Output].Columns[PŁEĆ]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[PŁEĆ]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CsvToDB\Merge.Inputs[Merge Input 1].Columns[LICZBA_WYSTĄPIEŃ]"
+                      cachedDataType="i2"
+                      cachedName="LICZBA_WYSTĄPIEŃ"
+                      lineageId="Package\CsvToDB\Sort.Outputs[Sort Output].Columns[LICZBA_WYSTĄPIEŃ]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[LICZBA_WYSTĄPIEŃ]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\CsvToDB\Merge.Inputs[Merge Input 2]"
+                  name="Merge Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CsvToDB\Merge.Inputs[Merge Input 2].Columns[WOJ]"
+                      cachedDataType="i1"
+                      cachedName="WOJ"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\CsvToDB\Sort 1.Outputs[Sort Output].Columns[WOJ]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[WOJ]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CsvToDB\Merge.Inputs[Merge Input 2].Columns[IMIĘ_PIERWSZE]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="IMIĘ_PIERWSZE"
+                      lineageId="Package\CsvToDB\Sort 1.Outputs[Sort Output].Columns[IMIĘ_PIERWSZE]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[IMIĘ_PIERWSZE]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CsvToDB\Merge.Inputs[Merge Input 2].Columns[PŁEĆ]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="PŁEĆ"
+                      lineageId="Package\CsvToDB\Sort 1.Outputs[Sort Output].Columns[PŁEĆ]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[PŁEĆ]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CsvToDB\Merge.Inputs[Merge Input 2].Columns[LICZBA_WYSTĄPIEŃ]"
+                      cachedDataType="i2"
+                      cachedName="LICZBA_WYSTĄPIEŃ"
+                      lineageId="Package\CsvToDB\Sort 1.Outputs[Sort Output].Columns[LICZBA_WYSTĄPIEŃ]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[LICZBA_WYSTĄPIEŃ]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CsvToDB\Merge.Outputs[Merge Output 1]"
+                  isSorted="true"
+                  name="Merge Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[WOJ]"
+                      dataType="i1"
+                      lineageId="Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[WOJ]"
+                      name="WOJ"
+                      sortKeyPosition="1" />
+                    <outputColumn
+                      refId="Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[IMIĘ_PIERWSZE]"
+                      codePage="65001"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[IMIĘ_PIERWSZE]"
+                      name="IMIĘ_PIERWSZE" />
+                    <outputColumn
+                      refId="Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[PŁEĆ]"
+                      codePage="65001"
+                      dataType="str"
+                      length="11"
+                      lineageId="Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[PŁEĆ]"
+                      name="PŁEĆ" />
+                    <outputColumn
+                      refId="Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[LICZBA_WYSTĄPIEŃ]"
+                      dataType="i2"
+                      lineageId="Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[LICZBA_WYSTĄPIEŃ]"
+                      name="LICZBA_WYSTĄPIEŃ" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CsvToDB\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Imiona_nadawane_2019]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CsvToDB\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{35B8FC66-E553-4310-98E0-A601DF6163E9}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LAPTOP-IAVEJ99H_SQLEXPRESS.SampleData]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\CsvToDB\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CsvToDB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WOJ]"
+                      cachedDataType="i1"
+                      cachedName="WOJ"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\CsvToDB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[woj]"
+                      lineageId="Package\CsvToDB\Sort by occurrences within Provinces.Outputs[Sort Output].Columns[WOJ]" />
+                    <inputColumn
+                      refId="Package\CsvToDB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LICZBA_WYSTĄPIEŃ]"
+                      cachedDataType="i2"
+                      cachedName="LICZBA_WYSTĄPIEŃ"
+                      cachedSortKeyPosition="-2"
+                      externalMetadataColumnId="Package\CsvToDB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ilosc]"
+                      lineageId="Package\CsvToDB\Sort by occurrences within Provinces.Outputs[Sort Output].Columns[LICZBA_WYSTĄPIEŃ]" />
+                    <inputColumn
+                      refId="Package\CsvToDB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of IMIĘ_PIERWSZE]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Copy of IMIĘ_PIERWSZE"
+                      externalMetadataColumnId="Package\CsvToDB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[imie]"
+                      lineageId="Package\CsvToDB\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of IMIĘ_PIERWSZE]" />
+                    <inputColumn
+                      refId="Package\CsvToDB\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PŁEĆ]"
+                      cachedDataType="wstr"
+                      cachedLength="11"
+                      cachedName="Copy of PŁEĆ"
+                      externalMetadataColumnId="Package\CsvToDB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[plec]"
+                      lineageId="Package\CsvToDB\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PŁEĆ]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CsvToDB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      dataType="i4"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\CsvToDB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[imie]"
+                      dataType="wstr"
+                      length="50"
+                      name="imie" />
+                    <externalMetadataColumn
+                      refId="Package\CsvToDB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[plec]"
+                      codePage="1250"
+                      dataType="str"
+                      length="1"
+                      name="plec" />
+                    <externalMetadataColumn
+                      refId="Package\CsvToDB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ilosc]"
+                      dataType="i4"
+                      name="ilosc" />
+                    <externalMetadataColumn
+                      refId="Package\CsvToDB\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[woj]"
+                      dataType="i4"
+                      name="woj" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CsvToDB\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\CsvToDB\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CsvToDB\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CsvToDB\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CsvToDB\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CsvToDB\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CsvToDB\Removing records without Provinces specified"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Removing records without Provinces specified"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\CsvToDB\Removing records without Provinces specified.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CsvToDB\Removing records without Provinces specified.Inputs[Conditional Split Input].Columns[WOJ]"
+                      cachedDataType="i1"
+                      cachedName="WOJ"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[WOJ]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CsvToDB\Removing records without Provinces specified.Outputs[Case 1]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Case 1"
+                  synchronousInputId="Package\CsvToDB\Removing records without Provinces specified.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">(#{Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[WOJ]}) &gt; 0</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">(WOJ) &gt; 0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CsvToDB\Removing records without Provinces specified.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\CsvToDB\Removing records without Provinces specified.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CsvToDB\Removing records without Provinces specified.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\CsvToDB\Removing records without Provinces specified.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CsvToDB\Removing records without Provinces specified.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CsvToDB\Removing records without Provinces specified.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CsvToDB\Removing records without Provinces specified.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CsvToDB\Removing records without Provinces specified.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CsvToDB\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\CsvToDB\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CsvToDB\Sort.Inputs[Sort Input].Columns[WOJ]"
+                      cachedDataType="i1"
+                      cachedName="WOJ"
+                      lineageId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].Columns[WOJ]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CsvToDB\Sort.Inputs[Sort Input].Columns[IMIĘ_PIERWSZE]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="IMIĘ_PIERWSZE"
+                      lineageId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].Columns[IMIĘ_PIERWSZE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CsvToDB\Sort.Inputs[Sort Input].Columns[PŁEĆ]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="PŁEĆ"
+                      lineageId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].Columns[PŁEĆ]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CsvToDB\Sort.Inputs[Sort Input].Columns[LICZBA_WYSTĄPIEŃ]"
+                      cachedDataType="i2"
+                      cachedName="LICZBA_WYSTĄPIEŃ"
+                      lineageId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].Columns[LICZBA_WYSTĄPIEŃ]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CsvToDB\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CsvToDB\Sort.Outputs[Sort Output].Columns[WOJ]"
+                      dataType="i1"
+                      lineageId="Package\CsvToDB\Sort.Outputs[Sort Output].Columns[WOJ]"
+                      name="WOJ"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].Columns[WOJ]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CsvToDB\Sort.Outputs[Sort Output].Columns[IMIĘ_PIERWSZE]"
+                      codePage="65001"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\CsvToDB\Sort.Outputs[Sort Output].Columns[IMIĘ_PIERWSZE]"
+                      name="IMIĘ_PIERWSZE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].Columns[IMIĘ_PIERWSZE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CsvToDB\Sort.Outputs[Sort Output].Columns[PŁEĆ]"
+                      codePage="65001"
+                      dataType="str"
+                      length="11"
+                      lineageId="Package\CsvToDB\Sort.Outputs[Sort Output].Columns[PŁEĆ]"
+                      name="PŁEĆ">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].Columns[PŁEĆ]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CsvToDB\Sort.Outputs[Sort Output].Columns[LICZBA_WYSTĄPIEŃ]"
+                      dataType="i2"
+                      lineageId="Package\CsvToDB\Sort.Outputs[Sort Output].Columns[LICZBA_WYSTĄPIEŃ]"
+                      name="LICZBA_WYSTĄPIEŃ">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\CsvToDB\Loading males names.Outputs[Flat File Source Output].Columns[LICZBA_WYSTĄPIEŃ]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CsvToDB\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\CsvToDB\Sort 1.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CsvToDB\Sort 1.Inputs[Sort Input].Columns[WOJ]"
+                      cachedDataType="i1"
+                      cachedName="WOJ"
+                      lineageId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].Columns[WOJ]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CsvToDB\Sort 1.Inputs[Sort Input].Columns[IMIĘ_PIERWSZE]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="IMIĘ_PIERWSZE"
+                      lineageId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].Columns[IMIĘ_PIERWSZE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CsvToDB\Sort 1.Inputs[Sort Input].Columns[PŁEĆ]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="PŁEĆ"
+                      lineageId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].Columns[PŁEĆ]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CsvToDB\Sort 1.Inputs[Sort Input].Columns[LICZBA_WYSTĄPIEŃ]"
+                      cachedDataType="i2"
+                      cachedName="LICZBA_WYSTĄPIEŃ"
+                      lineageId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].Columns[LICZBA_WYSTĄPIEŃ]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CsvToDB\Sort 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CsvToDB\Sort 1.Outputs[Sort Output].Columns[WOJ]"
+                      dataType="i1"
+                      lineageId="Package\CsvToDB\Sort 1.Outputs[Sort Output].Columns[WOJ]"
+                      name="WOJ"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].Columns[WOJ]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CsvToDB\Sort 1.Outputs[Sort Output].Columns[IMIĘ_PIERWSZE]"
+                      codePage="65001"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\CsvToDB\Sort 1.Outputs[Sort Output].Columns[IMIĘ_PIERWSZE]"
+                      name="IMIĘ_PIERWSZE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].Columns[IMIĘ_PIERWSZE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CsvToDB\Sort 1.Outputs[Sort Output].Columns[PŁEĆ]"
+                      codePage="65001"
+                      dataType="str"
+                      length="11"
+                      lineageId="Package\CsvToDB\Sort 1.Outputs[Sort Output].Columns[PŁEĆ]"
+                      name="PŁEĆ">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].Columns[PŁEĆ]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CsvToDB\Sort 1.Outputs[Sort Output].Columns[LICZBA_WYSTĄPIEŃ]"
+                      dataType="i2"
+                      lineageId="Package\CsvToDB\Sort 1.Outputs[Sort Output].Columns[LICZBA_WYSTĄPIEŃ]"
+                      name="LICZBA_WYSTĄPIEŃ">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\CsvToDB\Loading females names.Outputs[Flat File Source Output].Columns[LICZBA_WYSTĄPIEŃ]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CsvToDB\Sort by occurrences within Provinces"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort by occurrences within Provinces"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\CsvToDB\Sort by occurrences within Provinces.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CsvToDB\Sort by occurrences within Provinces.Inputs[Sort Input].Columns[WOJ]"
+                      cachedDataType="i1"
+                      cachedName="WOJ"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[WOJ]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CsvToDB\Sort by occurrences within Provinces.Inputs[Sort Input].Columns[IMIĘ_PIERWSZE]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="IMIĘ_PIERWSZE"
+                      lineageId="Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[IMIĘ_PIERWSZE]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CsvToDB\Sort by occurrences within Provinces.Inputs[Sort Input].Columns[PŁEĆ]"
+                      cachedCodepage="65001"
+                      cachedDataType="str"
+                      cachedLength="11"
+                      cachedName="PŁEĆ"
+                      lineageId="Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[PŁEĆ]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\CsvToDB\Sort by occurrences within Provinces.Inputs[Sort Input].Columns[LICZBA_WYSTĄPIEŃ]"
+                      cachedDataType="i2"
+                      cachedName="LICZBA_WYSTĄPIEŃ"
+                      lineageId="Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[LICZBA_WYSTĄPIEŃ]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">-2</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CsvToDB\Sort by occurrences within Provinces.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CsvToDB\Sort by occurrences within Provinces.Outputs[Sort Output].Columns[WOJ]"
+                      dataType="i1"
+                      lineageId="Package\CsvToDB\Sort by occurrences within Provinces.Outputs[Sort Output].Columns[WOJ]"
+                      name="WOJ"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[WOJ]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CsvToDB\Sort by occurrences within Provinces.Outputs[Sort Output].Columns[IMIĘ_PIERWSZE]"
+                      codePage="65001"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\CsvToDB\Sort by occurrences within Provinces.Outputs[Sort Output].Columns[IMIĘ_PIERWSZE]"
+                      name="IMIĘ_PIERWSZE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[IMIĘ_PIERWSZE]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CsvToDB\Sort by occurrences within Provinces.Outputs[Sort Output].Columns[PŁEĆ]"
+                      codePage="65001"
+                      dataType="str"
+                      length="11"
+                      lineageId="Package\CsvToDB\Sort by occurrences within Provinces.Outputs[Sort Output].Columns[PŁEĆ]"
+                      name="PŁEĆ">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[PŁEĆ]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CsvToDB\Sort by occurrences within Provinces.Outputs[Sort Output].Columns[LICZBA_WYSTĄPIEŃ]"
+                      dataType="i2"
+                      lineageId="Package\CsvToDB\Sort by occurrences within Provinces.Outputs[Sort Output].Columns[LICZBA_WYSTĄPIEŃ]"
+                      name="LICZBA_WYSTĄPIEŃ"
+                      sortKeyPosition="-2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\CsvToDB\Merge.Outputs[Merge Output 1].Columns[LICZBA_WYSTĄPIEŃ]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\CsvToDB.Paths[Case 1]"
+              endId="Package\CsvToDB\Sort by occurrences within Provinces.Inputs[Sort Input]"
+              name="Case 1"
+              startId="Package\CsvToDB\Removing records without Provinces specified.Outputs[Case 1]" />
+            <path
+              refId="Package\CsvToDB.Paths[Data Conversion Output]"
+              endId="Package\CsvToDB\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\CsvToDB\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\CsvToDB.Paths[Derived Column Output]"
+              endId="Package\CsvToDB\Sort.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\CsvToDB\Changing gender value to &quot;m&quot;.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\CsvToDB.Paths[Derived Column Output1]"
+              endId="Package\CsvToDB\Sort 1.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\CsvToDB\Changing gender values to &quot;k&quot;.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\CsvToDB.Paths[Flat File Source Output]"
+              endId="Package\CsvToDB\Changing gender values to &quot;k&quot;.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\CsvToDB\Loading females names.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\CsvToDB.Paths[Flat File Source Output1]"
+              endId="Package\CsvToDB\Changing gender value to &quot;m&quot;.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\CsvToDB\Loading males names.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\CsvToDB.Paths[Merge Output 1]"
+              endId="Package\CsvToDB\Removing records without Provinces specified.Inputs[Conditional Split Input]"
+              name="Merge Output 1"
+              startId="Package\CsvToDB\Merge.Outputs[Merge Output 1]" />
+            <path
+              refId="Package\CsvToDB.Paths[Sort Output]"
+              endId="Package\CsvToDB\Data Conversion.Inputs[Data Conversion Input]"
+              name="Sort Output"
+              startId="Package\CsvToDB\Sort by occurrences within Provinces.Outputs[Sort Output]" />
+            <path
+              refId="Package\CsvToDB.Paths[Sort Output1]"
+              endId="Package\CsvToDB\Merge.Inputs[Merge Input 1]"
+              name="Sort Output"
+              startId="Package\CsvToDB\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\CsvToDB.Paths[Sort Output2]"
+              endId="Package\CsvToDB\Merge.Inputs[Merge Input 2]"
+              name="Sort Output"
+              startId="Package\CsvToDB\Sort 1.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="123.2,41.6"
+          Id="Package\CsvToDB"
+          TopLeft="5.49999999999999,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\CsvToDB">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\CsvToDB\Loading males names"
+          TopLeft="61.8666746669343,6.55999986775714" />
+        <NodeLayout
+          Size="216,41.6"
+          Id="Package\CsvToDB\Changing gender value to &quot;m&quot;"
+          TopLeft="46.6666648123,99.8400007934571" />
+        <NodeLayout
+          Size="188.8,41.6"
+          Id="Package\CsvToDB\Loading females names"
+          TopLeft="363.333318895764,1.38666667768693" />
+        <NodeLayout
+          Size="217.6,41.6"
+          Id="Package\CsvToDB\Changing gender values to &quot;k&quot;"
+          TopLeft="339.333319849439,92.9066674050226" />
+        <EdgeLayout
+          Id="Package\CsvToDB.Paths[Flat File Source Output]"
+          TopLeft="457.733318895764,42.9866666776869">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9.59999904632576,49.9200007273356"
+              Start="0,0"
+              End="-9.59999904632576,42.4200007273356">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.9600003636678" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.9600003636678"
+                    Point2="0,24.9600003636678"
+                    Point3="-4,24.9600003636678" />
+                  <mssgle:LineSegment
+                    End="-5.59999904632576,24.9600003636678" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.59999904632576,24.9600003636678"
+                    Point2="-9.59999904632576,24.9600003636678"
+                    Point3="-9.59999904632576,28.9600003636678" />
+                  <mssgle:LineSegment
+                    End="-9.59999904632576,42.4200007273356" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CsvToDB.Paths[Flat File Source Output1]"
+          TopLeft="153.266669739617,48.1599998677571">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51.6800009256999"
+              Start="0,0"
+              End="0,44.1800009256999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.1800009256999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="291.2,41.6"
+          Id="Package\CsvToDB\Removing records without Provinces specified"
+          TopLeft="239.999990463257,368.533335454729" />
+        <NodeLayout
+          Size="248.8,41.6"
+          Id="Package\CsvToDB\Sort by occurrences within Provinces"
+          TopLeft="436.962945599616,216.373333438026" />
+        <EdgeLayout
+          Id="Package\CsvToDB.Paths[Case 1]"
+          TopLeft="432.799990463257,368.533335454729">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="128.562955136358,-110.560002016703"
+              Start="0,0"
+              End="128.562955136358,-103.060002016703">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-40.5864926165721" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-40.5864926165721"
+                    Point2="0,-44.5864926165721"
+                    Point3="4,-44.5864926165721" />
+                  <mssgle:LineSegment
+                    End="124.562955136358,-44.5864926165721" />
+                  <mssgle:CubicBezierSegment
+                    Point1="124.562955136358,-44.5864926165721"
+                    Point2="128.562955136358,-44.5864926165721"
+                    Point3="128.562955136358,-48.5864926165721" />
+                  <mssgle:LineSegment
+                    End="128.562955136358,-103.060002016703" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="49.0633916306792,-39.5864926165721,30.436171875,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\CsvToDB\Data Conversion"
+          TopLeft="695.33330570327,114.40000090917" />
+        <EdgeLayout
+          Id="Package\CsvToDB.Paths[Sort Output]"
+          TopLeft="561.362945599616,216.373333438026">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="187.303693436988,-60.3733325288561"
+              Start="0,0"
+              End="187.303693436988,-52.8733325288561">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-31.8562431770364" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-31.8562431770364"
+                    Point2="0,-35.8562431770364"
+                    Point3="4,-35.8562431770364" />
+                  <mssgle:LineSegment
+                    End="183.303693436988,-35.8562431770364" />
+                  <mssgle:CubicBezierSegment
+                    Point1="183.303693436988,-35.8562431770364"
+                    Point2="187.303693436988,-35.8562431770364"
+                    Point3="187.303693436988,-39.8562431770364" />
+                  <mssgle:LineSegment
+                    End="187.303693436988,-52.8733325288561" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\CsvToDB\Sort"
+          TopLeft="125.99999499321,191.360001520793" />
+        <EdgeLayout
+          Id="Package\CsvToDB.Paths[Derived Column Output]"
+          TopLeft="154.6666648123,141.440000793457">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.1333301809101,49.9200007273356"
+              Start="0,0"
+              End="20.1333301809101,42.4200007273356">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.9600003636678" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.9600003636678"
+                    Point2="0,24.9600003636678"
+                    Point3="4,24.9600003636678" />
+                  <mssgle:LineSegment
+                    End="16.1333301809101,24.9600003636678" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.1333301809101,24.9600003636678"
+                    Point2="20.1333301809101,24.9600003636678"
+                    Point3="20.1333301809101,28.9600003636678" />
+                  <mssgle:LineSegment
+                    End="20.1333301809101,42.4200007273356" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="106.4,41.6"
+          Id="Package\CsvToDB\Sort 1"
+          TopLeft="333.999986728033,162.240001289368" />
+        <EdgeLayout
+          Id="Package\CsvToDB.Paths[Derived Column Output1]"
+          TopLeft="448.133319849439,134.506667405023">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-60.9333331214056,27.7333338843451"
+              Start="0,0"
+              End="-60.9333331214056,20.2333338843451">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.86666694217256" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.86666694217256"
+                    Point2="0,13.8666669421726"
+                    Point3="-4,13.8666669421726" />
+                  <mssgle:LineSegment
+                    End="-56.9333331214056,13.8666669421726" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-56.9333331214056,13.8666669421726"
+                    Point2="-60.9333331214056,13.8666669421726"
+                    Point3="-60.9333331214056,17.8666669421726" />
+                  <mssgle:LineSegment
+                    End="-60.9333331214056,20.2333338843451" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="108,41.6"
+          Id="Package\CsvToDB\Merge"
+          TopLeft="203.333325253593,277.333335537381" />
+        <EdgeLayout
+          Id="Package\CsvToDB.Paths[Sort Output1]"
+          TopLeft="174.79999499321,232.960001520793">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="65.8666635937162,44.3733340165881"
+              Start="0,0"
+              End="65.8666635937162,36.8733340165881">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.2353288711214" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.2353288711214"
+                    Point2="0,26.2353288711214"
+                    Point3="4,26.2353288711214" />
+                  <mssgle:LineSegment
+                    End="61.8666635937162,26.2353288711214" />
+                  <mssgle:CubicBezierSegment
+                    Point1="61.8666635937162,26.2353288711214"
+                    Point2="65.8666635937162,26.2353288711214"
+                    Point3="65.8666635937162,30.2353288711214" />
+                  <mssgle:LineSegment
+                    End="65.8666635937162,36.8733340165881" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CsvToDB.Paths[Sort Output2]"
+          TopLeft="387.199986728033,203.840001289368">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-113.199994807773,73.4933342480131"
+              Start="0,0"
+              End="-113.199994807773,65.9933342480131">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.4522633145187" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.4522633145187"
+                    Point2="0,43.4522633145187"
+                    Point3="-4,43.4522633145187" />
+                  <mssgle:LineSegment
+                    End="-109.199994807773,43.4522633145187" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-109.199994807773,43.4522633145187"
+                    Point2="-113.199994807773,43.4522633145187"
+                    Point3="-113.199994807773,47.4522633145187" />
+                  <mssgle:LineSegment
+                    End="-113.199994807773,65.9933342480131" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CsvToDB.Paths[Merge Output 1]"
+          TopLeft="257.333325253593,318.933335537381">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="81.0666652096642,49.5999999173482"
+              Start="0,0"
+              End="81.0666652096642,42.0999999173482">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.5973769998602" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.5973769998602"
+                    Point2="0,29.5973769998602"
+                    Point3="4,29.5973769998602" />
+                  <mssgle:LineSegment
+                    End="77.0666652096642,29.5973769998602" />
+                  <mssgle:CubicBezierSegment
+                    Point1="77.0666652096642,29.5973769998602"
+                    Point2="81.0666652096642,29.5973769998602"
+                    Point3="81.0666652096642,33.5973769998602" />
+                  <mssgle:LineSegment
+                    End="81.0666652096642,42.0999999173482" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\CsvToDB\OLE DB Destination"
+          TopLeft="743.851822293836,298.903706079177" />
+        <EdgeLayout
+          Id="Package\CsvToDB.Paths[Data Conversion Output]"
+          TopLeft="797.999972369937,156.00000090917">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="31.4518499238991,142.903705170007"
+              Start="0,0"
+              End="31.4518499238991,135.403705170007">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.0319614903584" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,54.0319614903584"
+                    Point2="0,58.0319614903584"
+                    Point3="4,58.0319614903584" />
+                  <mssgle:LineSegment
+                    End="27.4518499238991,58.0319614903584" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27.4518499238991,58.0319614903584"
+                    Point2="31.4518499238991,58.0319614903584"
+                    Point3="31.4518499238991,62.0319614903584" />
+                  <mssgle:LineSegment
+                    End="31.4518499238991,135.403705170007" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\CsvToDB\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
